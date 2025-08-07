@@ -1,6 +1,6 @@
 # ⚡ Energy Data Pipeline – RTE Eco2mix Ingestion
 
-This project is a simple but production-ready **data engineering pipeline** that fetches **daily electricity production and consumption data** from the **RTE (Réseau de Transport d'Électricité)** Eco2mix API and stores it in a **PostgreSQL database**. It’s fully containerized with **Docker** and easy to extend for forecasting, visualization, or real-time streaming.
+This project is a simple but production-ready **data engineering pipeline** that fetches **daily electricity consumption data** from the **RTE (Réseau de Transport d'Électricité)** Eco2mix API and stores it in a **PostgreSQL database**. It’s fully containerized with **Docker** and easy to extend for forecasting, visualization, or real-time streaming.
 
 The goal of this project is to show how we can do a simple ingestion from an API to a local portgress database.
 
@@ -8,7 +8,7 @@ The goal of this project is to show how we can do a simple ingestion from an API
 
 ## 🧱 Project Overview
 
-![Alt text](/Users/laminediedhiou/Desktop/Github/RTE---Energy-Consumption-/Pipelines design.drawio.drawio.png)
+![Pipeline Diagram](RTE---Energy-Consumption-/Pipelines design.drawio.drawio.png)
 
 - **Data Source:** RTE Open Data – [Eco2mix national-tr API](https://data.rte-france.com)
 - **Pipeline Steps:**

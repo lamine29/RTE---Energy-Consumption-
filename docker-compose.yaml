@@ -20,7 +20,7 @@ services:
       - 8080:8080
 
   etl:
-    build: ./etl
+    build: ./pipelines
     depends_on:
       - db
     environment:
