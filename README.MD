@@ -8,6 +8,8 @@ The goal of this project is to show how we can do a simple ingestion from an API
 
 ## 🧱 Project Overview
 
+![Alt text](/Users/laminediedhiou/Desktop/Github/RTE---Energy-Consumption-/Pipelines design.drawio.drawio.png)
+
 - **Data Source:** RTE Open Data – [Eco2mix national-tr API](https://data.rte-france.com)
 - **Pipeline Steps:**
   1. Authenticate with the RTE API using OAuth2.
