@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: energy
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  etl:
+    build: ./etl
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: energy
+      DB_USER: user
+      DB_PASSWORD: password
+      RTE_API_CLIENT_ID: ${RTE_API_CLIENT_ID}
+      RTE_API_CLIENT_SECRET: ${RTE_API_CLIENT_SECRET}
+    command: python main.py
+
+volumes:
+  db_data:
