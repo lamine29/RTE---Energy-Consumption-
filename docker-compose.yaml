@@ -24,11 +24,11 @@ services:
     depends_on:
       - db
     environment:
-      DB_HOST: db
-      DB_PORT: 5432
-      DB_NAME: energy
-      DB_USER: user
-      DB_PASSWORD: password
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
       RTE_API_CLIENT_ID: ${RTE_API_CLIENT_ID}
       RTE_API_CLIENT_SECRET: ${RTE_API_CLIENT_SECRET}
     command: python main.py

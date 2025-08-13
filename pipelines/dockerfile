@@ -1,0 +1,13 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY main.py .
+
+CMD ["python", "main.py"]
+# Dockerfile for RTE Eco2mix Data Pipeline
+# This Dockerfile sets up a Python environment to run the RTE Eco2mix data ingestion
+# pipeline. It installs the necessary dependencies and runs the main script.
