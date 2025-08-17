@@ -4,9 +4,9 @@ services:
   db:
     image: postgres:15
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: energy
+      POSTGRES_USER: roboticuser
+      POSTGRES_PASSWORD: Hakagami2909@@@
+      POSTGRES_DB: energydb
     ports:
       - "5432:5432"
     volumes:
